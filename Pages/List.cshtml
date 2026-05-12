@@ -1,0 +1,26 @@
+@page
+@model ListModel
+<div>
+    <div class="d-flex justify-content-end">
+        <a href="Register" class="btn btn-success">Add New</a>
+    </div>
+    <table class="table table-responsive">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var student in Model.User){
+        <tr>
+            <td>@student.ID</td>
+            <td>@student.Name</td>
+            <td>@student.Age</td>
+            <td>
+                    <a asp-page="Delete" asp-route-id="@student.ID" class="btn btn-danger btn-sm">Delete</a>
+                    <a asp-page="Edit" asp-route-id="@student.ID" class="btn btn-warning btn-sm">Edit</a>
+            </td>
+        </tr>
+        }
+    </table>
+</div>

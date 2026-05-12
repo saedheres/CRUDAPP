@@ -1,0 +1,11 @@
+@page
+@model EditModel
+<h2>User Update</h2>
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="User.ID"/>
+        <input type="Text" placeholder="Enter Name" class="form-control" asp-for="User.Name" />
+        <input type="Text" placeholder="Age" class="form-control" asp-for="User.Age" />
+        <button type="Submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
